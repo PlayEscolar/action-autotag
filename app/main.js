@@ -67,10 +67,13 @@ async function run () {
 
     // Check for existance of tag and abort (short circuit) if it already exists.
     if (await tag.exists()) {
-      core.warning(`"${tag.name}" tag already exists.(test)` + os.EOL)
+      core.warning(`"${tag.name}" tag already exists.` + os.EOL)
       core.setOutput('tagname', '')
-      core.setFailed(`"exit (test2)` + os.EOL)
-      return
+      const canExit = core.getInput('exit_if_tag_exists', { required: false }).toLocaleLowerCase() === 'true';
+      if (canExit) {
+        core.setFailed(`Exiting, "${tag.name}" tag already exists.` + os.EOL)
+        return
+      }
     }
 
     // The tag setter will autocorrect the message if necessary.
