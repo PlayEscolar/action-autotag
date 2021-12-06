@@ -72,8 +72,8 @@ async function run () {
       const canExit = core.getInput('exit_if_tag_exists', { required: false }).toLocaleLowerCase() === 'true';
       if (canExit) {
         core.setFailed(`Exiting, "${tag.name}" tag already exists.` + os.EOL)
-        return
       }
+      return
     }
 
     // The tag setter will autocorrect the message if necessary.
