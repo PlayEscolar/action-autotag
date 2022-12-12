@@ -1,3 +1,10 @@
+#
+
+This project create a action at Github actions
+This project is used by other projects in other CI pipelines using actions
+This repository need to be Public
+Need to create a TAG with the name that will be used in PlayEscolar projects
+
 # Autotag
 
 This action will auto-generate a Github tag whenever a new version is detected. The following "detection strategies" are available:
