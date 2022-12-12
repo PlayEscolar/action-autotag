@@ -268,4 +268,4 @@ If you use this or find value in it, please consider contributing in one or more
 1. Fix an issue.
 1. Add a feature (post a proposal in an issue first!).
 
-Copyright &copy; 2020 Butler Logic, Corey Butler, and Contributors.
+Copyright &copy; 2020 Butler Logic, Corey Butler, and Contributors. 
